@@ -1,43 +1,88 @@
+@import "mixins";
+@import "typography";
 
+// Global
 
-
-// Typography
-
-h1{}
-h2{}
-h3{}
-
-p{}
-p.intro{}
-
-a{}
-a:hover{}
-a:active{}
-
-figure{}
-figcaption{}
-
-
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
 
 // Layout
-
-header{}
+header{
+width:100%;
+}
 
 section{
 
 
-	
 }
 
-article{}
+article{
+width:90%;
+padding:1em 5%;
+}
 
-.photographs{}
+.photographs{
 
-.photo{}
+}
 
+.photo{
+background-image: url(../img/handmadepaper.png);
+padding:1em;
+margin:1em;
+@include drop-shadow;
+
+	img{
+		width:100%;
+		outline: 1px solid $light-grey;
+	}
+
+}
+
+
+
+nav{
+
+}
+
+nav ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+nav li{
+
+}
 
 // Primary Nav
 
+nav a{
+	text-decoration:none;
+	color: $dark-grey;
+	display:block;
+	margin:0;
+	padding:1em 1em;
+	border-bottom:1px solid $light-grey;
+
+	&:hover{
+		color:$blue;
+		
+		
+	}
+
+	&:active{
+		color:$white;
+		background-color:$blue;
+		
+	}
+
+}
 
 // Utility Nav
 
