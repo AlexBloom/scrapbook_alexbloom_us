@@ -19,19 +19,56 @@ width:100%;
 
 section{
 
-
 }
 
 article{
 width:90%;
 padding:1em 5%;
+
+	@media screen and (min-width:(em(800))){
+		
+		p.two{
+			column-count:2;
+			-moz-column-count:2;
+			-webkit-column-count:2;
+
+			-moz-column-gap:3em;
+			-webkit-column-gap:3em;
+			column-gap:3em;
+
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			hyphens: auto;
+			
+		}
+			
+	}
+
+	@media screen and (min-width:(em(800))){
+	width: (em(800));
+	margin:0 auto;		
+	}
+
 }
 
 .photographs{
+	position:relative;
 
+	//background-color:$dark-grey;
+
+	@media screen and (min-width:(em(940))){
+	width: (em(940));
+	margin:0 auto;
+	}
+
+	@media screen and (min-width:(em(1400))){
+	width: (em(1400));
+	margin:0 auto;
+	}
 }
 
 .photo{
+float:left;
 background-image: url(../img/handmadepaper.png);
 padding:1em;
 margin:1em;
@@ -42,49 +79,112 @@ margin:1em;
 		outline: 1px solid $light-grey;
 	}
 
+	@media screen and (min-width:(em(800))){
+		float:none;
+		width: (em(800));
+		margin:2em auto;
+	}
+
+}
+
+
+// ALTERNATE STYLES FOR GRID VIEW
+
+.photoalt{
+	width:400px;
+}
+
+figcaption.alt{
+	display:none;
 }
 
 
-
-nav{
-
-}
-
-nav ul{
-	margin:0;
-	padding:0;
-	list-style-type:none;
-}
-
-nav li{
-
-}
 
 // Primary Nav
 
-nav a{
+#toggle{
+	float:right;
+	margin:1em;
+	padding:.5em 1em;
+	border:1px solid $light-grey;
+
+	&:hover{
+		color:$blue;
+	}
+	&:active{
+		background-color:$blue; 
+		color:$white;
+	}
+
+	@media screen and (min-width:(em(600))){
+		display:none;
+	}
+}
+
+#primary{
+	max-height:auto;
+	overflow:hidden;
+
+	ul{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+	li{
+
+	}
+}
+
+#primary a{
 	text-decoration:none;
 	color: $dark-grey;
 	display:block;
 	margin:0;
-	padding:1em 1em;
-	border-bottom:1px solid $light-grey;
+	padding:1em 2em;
+	border-top:1px solid $light-grey;
 
 	&:hover{
 		color:$blue;
-		
-		
 	}
 
 	&:active{
 		color:$white;
 		background-color:$blue;
-		
 	}
 
+	@media screen and (min-width:(em(600))){
+		float:left;
+		width: auto;
+		border:none;		
+	}
+}
+
+#primary {
+	border-bottom:1px solid $light-grey;
 }
 
 // Utility Nav
 
+#utility{
+	
+
+	a{
+		margin:0;
+		padding:.5em;
+		border:none;
+	}
+
+	ul{
+		margin:0 auto;
+		width:150px;
+		list-style-type:none;
+	}
+
+	li{
+		float:left;
+		padding:.1em;
+		margin:0;
+	}
+}
 
 // 
