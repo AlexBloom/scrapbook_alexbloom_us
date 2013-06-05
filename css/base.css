@@ -68,15 +68,14 @@ article a {
 blockquote {
   font-style: italic;
   line-height: 1.75em;
-  font-size: 2em;
+  font-size: 1.15em;
   float: left;
   font-family: Georgia, times, serif;
   font-style: italic;
   font-weight: 400;
-  border-top: 1px solid #151515;
-  border-bottom: 1px solid #151515;
-  padding: 1em 0;
-  margin: 1em 0; }
+  border-left: 1px dotted #151515;
+  padding: 0 0 0 2em;
+  margin: 2em 0; }
 
 blockquote:before {
   font-family: Georgia, serif;
@@ -88,7 +87,7 @@ blockquote:before {
 
 figcaption {
   font-size: 0.9em;
-  padding: 1.25em 0.75em 0.75em;
+  padding: 1.25em .75em .75em;
   line-height: 175%; }
 
 .run-in {
@@ -138,14 +137,19 @@ article {
 
 .photographs {
   position: relative; }
-  @media screen and (min-width: 58.75em) {
+  @media screen and (min-width: 37.5em) {
     .photographs {
-      width: 58.75em;
+      width: 37.5em;
       margin: 0 auto; } }
+  @media screen and (min-width: 50em) {
+    .photographs {
+      width: 50em; } }
+  @media screen and (min-width: 60em) {
+    .photographs {
+      width: 60em; } }
   @media screen and (min-width: 87.5em) {
     .photographs {
-      width: 87.5em;
-      margin: 0 auto; } }
+      width: 87.5em; } }
 
 .photo {
   float: left;
@@ -166,54 +170,94 @@ article {
       width: 50em;
       margin: 2em auto; } }
 
-.photoalt {
-  width: 400px; }
+/*.photo{
 
-figcaption.alt {
-  display: none; }
+	@media screen and (min-width:(em(600))){
+	width:260px;
+	margin:10px;
+	padding:10px;
+	}
 
+	@media screen and (min-width:(em(800))){
+	width: 360px;
+	}
+
+	@media screen and (min-width:(em(960))){
+	width:280px;
+	}
+
+	@media screen and (min-width:(em(1400))){
+	width:310px;
+	}
+	
+	
+}
+
+figcaption{
+	display:none;
+	
+}*/
 #toggle {
-  float: right;
+  float: left;
   margin: 1em;
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   border: 1px solid #aaaaaa; }
   #toggle:hover {
     color: #03b8ca; }
   #toggle:active {
     background-color: #03b8ca;
     color: white; }
-  @media screen and (min-width: 37.5em) {
+  @media screen and (min-width: 46.875em) {
     #toggle {
       display: none; } }
 
+#mail {
+  float: right;
+  margin: 1em;
+  padding: .5em 1em;
+  border: 1px solid #aaaaaa; }
+  #mail:hover a {
+    color: #03b8ca; }
+  #mail:active {
+    background-color: #03b8ca; }
+    #mail:active a {
+      color: white; }
+  @media screen and (min-width: 46.875em) {
+    #mail {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin: 0em;
+      padding: 1em 2em; } }
+
 #primary {
   max-height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa; }
   #primary ul {
     margin: 0;
     padding: 0;
     list-style-type: none; }
+    @media screen and (min-width: 46.875em) {
+      #primary ul {
+        width: 600px;
+        margin: 0 auto; } }
 
 #primary a {
   text-decoration: none;
   color: #252525;
   display: block;
   margin: 0;
-  padding: 1em 2em;
-  border-top: 1px solid #aaaaaa; }
+  padding: 1em 1%;
+  float: left;
+  width: 23%;
+  text-align: center; }
   #primary a:hover {
     color: #03b8ca; }
   #primary a:active {
     color: white;
     background-color: #03b8ca; }
-  @media screen and (min-width: 37.5em) {
-    #primary a {
-      float: left;
-      width: auto;
-      border: none; } }
-
-#primary {
-  border-bottom: 1px solid #aaaaaa; }
 
 #utility a {
   margin: 0;

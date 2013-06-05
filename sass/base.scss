@@ -56,14 +56,21 @@ padding:1em 5%;
 
 	//background-color:$dark-grey;
 
-	@media screen and (min-width:(em(940))){
-	width: (em(940));
+	@media screen and (min-width:(em(600))){
+	width: (em(600));
 	margin:0 auto;
+	}
+
+	@media screen and (min-width:(em(800))){
+	width: (em(800));
+	}
+
+	@media screen and (min-width:(em(960))){
+	width: (em(960));
 	}
 
 	@media screen and (min-width:(em(1400))){
 	width: (em(1400));
-	margin:0 auto;
 	}
 }
 
@@ -90,20 +97,40 @@ margin:1em;
 
 // ALTERNATE STYLES FOR GRID VIEW
 
-.photoalt{
-	width:400px;
+/*.photo{
+
+	@media screen and (min-width:(em(600))){
+	width:260px;
+	margin:10px;
+	padding:10px;
+	}
+
+	@media screen and (min-width:(em(800))){
+	width: 360px;
+	}
+
+	@media screen and (min-width:(em(960))){
+	width:280px;
+	}
+
+	@media screen and (min-width:(em(1400))){
+	width:310px;
+	}
+	
+	
 }
 
-figcaption.alt{
+figcaption{
 	display:none;
-}
+	
+}*/
 
 
 
 // Primary Nav
 
 #toggle{
-	float:right;
+	float:left;
 	margin:1em;
 	padding:.5em 1em;
 	border:1px solid $light-grey;
@@ -116,23 +143,57 @@ figcaption.alt{
 		color:$white;
 	}
 
-	@media screen and (min-width:(em(600))){
+	@media screen and (min-width:(em(750))){
 		display:none;
 	}
 }
 
+#mail{
+	float:right;
+	margin:1em;
+	padding:.5em 1em;
+	border:1px solid $light-grey;
+
+	&:hover a{
+		color:$blue;
+	}
+	&:active{
+		background-color:$blue; 
+
+		a{
+		color:$white;
+		}
+	}
+
+	@media screen and (min-width:(em(750))){
+		position:absolute;
+		top:0px;
+		right:0px;
+		margin:0em;
+		padding:1em 2em;
+	}
+}
+
+
+
 #primary{
 	max-height:auto;
 	overflow:hidden;
+	border-top:1px solid $light-grey;
+	border-bottom:1px solid $light-grey;
 
 	ul{
 		margin:0;
 		padding:0;
 		list-style-type:none;
-	}
-	li{
 
+		@media screen and (min-width:(em(750))){
+		width:600px;
+		margin:0 auto;
+		}
 	}
+
+	
 }
 
 #primary a{
@@ -140,8 +201,10 @@ figcaption.alt{
 	color: $dark-grey;
 	display:block;
 	margin:0;
-	padding:1em 2em;
-	border-top:1px solid $light-grey;
+	padding:1em 1%;
+	float:left;
+	width:23%;
+	text-align:center;
 
 	&:hover{
 		color:$blue;
@@ -152,15 +215,7 @@ figcaption.alt{
 		background-color:$blue;
 	}
 
-	@media screen and (min-width:(em(600))){
-		float:left;
-		width: auto;
-		border:none;		
-	}
-}
-
-#primary {
-	border-bottom:1px solid $light-grey;
+	
 }
 
 // Utility Nav

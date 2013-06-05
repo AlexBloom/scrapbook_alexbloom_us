@@ -102,15 +102,14 @@ article a{
 blockquote{
 	font-style:italic; 
 	line-height:1.75em; 
-	font-size:2em; 
+	font-size:1.15em; 
 	float:left; 
 	font-family: Georgia, times, serif; 
 	font-style:italic; 
 	font-weight:400; 
-	border-top: 1px solid #151515; 
-	border-bottom: 1px solid #151515; 
-	padding: 1em 0; 
-	margin: 1em 0;
+	border-left: 1px dotted #151515; 
+	padding: 0 0 0 2em; 
+	margin: 2em 0;
 }
 
 blockquote:before{
