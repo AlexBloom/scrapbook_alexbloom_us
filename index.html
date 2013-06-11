@@ -19,9 +19,11 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
-
     <!--SCRIPT-->
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <script type="text/javascript" src="//use.typekit.net/pcg6qsc.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
 
 
@@ -30,19 +32,19 @@
 <body>
 
     <header class="cf"> 
-        <nav id="primary">
+        <nav id="primary" class="cf">
             <ul>
-                <li> <a href="#content"><i class="icon-home"></i> Welcome </a></li> 
-                <li> <a href="#Memory"> Memory </a> </li> 
-                <li> <a href="#Land"> Landscape  </a> </li> 
-                <li> <a href="#Signs"> Signage </a> </li> 
+                <li> <a class="active" href="index.html"><i class="icon-home"></i> Journal </a></li> 
+                <li> <a href="memory.html"> Memory </a> </li> 
+                <li> <a href="land.html"> Landscape  </a> </li> 
+                <li> <a href="signs.html"> Signage </a> </li> 
                 
             </ul>
         </nav>
 
-        <nav id="toggle" class="cf">
+       <!--  <nav id="toggle" class="cf">
             Menu
-        </nav>
+        </nav> -->
 
         <nav id="mail"> 
             <a href="mailto:alexbloomdesign@gmail.com"target=_blank> Email<i class="icon-mail"></i> </a> 
@@ -88,8 +90,8 @@
             <section class="photographs cf">
                 <nav id="utility" class="cf">
                     <ul>
-                        <li><a id="single" href="#" class="column"> Single </a> </li>
-                        <li><a id="grid" href="#" class="grid"> Grid </a> </li>
+                        <li><a id="single" class="column"> Single </a> </li>
+                        <li><a id="grid" class="grid"> Grid </a> </li>
                     </ul>
                 </nav>
                 <figure class="photo"> <a href="img/holga/RI_Providence.jpg"target=_blank> <img src="img/holga/RI_Providence.jpg" alt="" /> <figcaption>Providence, RI</figcaption></a></figure>
@@ -316,6 +318,31 @@
 
 
     </footer>
+
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+     $(".photo").addClass('singleview');
+
+     $("#single").click(function(){
+         $(".photo").removeClass('gridview');
+         $(".photo").addClass('singleview');
+         $(this).addClass('active');
+         $('figcaption').css({ display:'block'});
+     });
+
+     $("#grid").click(function(){
+         $(".photo").removeClass('singleview');
+         $(".photo").addClass('gridview');
+         $(this).addClass('active');
+         $('figcaption').css({ display:'none'});
+     });
+
+
+    </script>
+
 
 </body>
 

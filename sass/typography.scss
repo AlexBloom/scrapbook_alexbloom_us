@@ -1,7 +1,7 @@
 /* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
 
 body{
-	font-family:"superclarendon", georgia, courier, serif;
+	font-family:"garamond-premier-pro", georgia, courier, serif;
 	line-height:1.75em;
 	font-size:1em;
 
@@ -11,18 +11,26 @@ body{
 }
 
 h1{
+font-family:"alternate-gothic-no-2-d", helvetica, arial, sans-serif;
 font-weight:700;
 text-align:center;
+text-transform:uppercase;
+letter-spacing:.1em;
 }
 
 h2{
+font-family:"alternate-gothic-no-3-d", helvetica, arial, sans-serif;
 font-weight:700;
 text-align:center;
+text-transform:uppercase;
+letter-spacing:.1em;
 }
 
 h3{
+font-family:"alternate-gothic-no-3-d", helvetica, arial, sans-serif;
 font-weight:800;
 text-align:center;
+
 }
 
 h4{

@@ -1,0 +1,1 @@
+$(".photo").addClass("singleview");$("#single").click(function(){$(".photo").removeClass("gridview");$(".photo").addClass("singleview");$(this).addClass("active");$("figcaption").css({display:"auto"})});$("#grid").click(function(){$(".photo").removeClass("singleview");$(".photo").addClass("gridview");$(this).addClass("active");$("figcaption").css({display:"none"})});

@@ -74,17 +74,21 @@ padding:1em 5%;
 	}
 }
 
+
 .photo{
 float:left;
 background-image: url(../img/handmadepaper.png);
 padding:1em;
 margin:1em;
 @include drop-shadow;
-
-	img{
+img{
 		width:100%;
 		outline: 1px solid $light-grey;
 	}
+}
+
+.singleview{
+
 
 	@media screen and (min-width:(em(800))){
 		float:none;
@@ -95,9 +99,9 @@ margin:1em;
 }
 
 
-// ALTERNATE STYLES FOR GRID VIEW
+// STYLES FOR GRID VIEW
 
-/*.photo{
+.gridview{
 
 	@media screen and (min-width:(em(600))){
 	width:260px;
@@ -120,10 +124,6 @@ margin:1em;
 	
 }
 
-figcaption{
-	display:none;
-	
-}*/
 
 
 
@@ -149,6 +149,7 @@ figcaption{
 }
 
 #mail{
+	display:none;
 	float:right;
 	margin:1em;
 	padding:.5em 1em;
@@ -166,6 +167,7 @@ figcaption{
 	}
 
 	@media screen and (min-width:(em(750))){
+		display:block;
 		position:absolute;
 		top:0px;
 		right:0px;
@@ -178,7 +180,7 @@ figcaption{
 
 #primary{
 	max-height:auto;
-	overflow:hidden;
+	
 	border-top:1px solid $light-grey;
 	border-bottom:1px solid $light-grey;
 
@@ -193,7 +195,29 @@ figcaption{
 		}
 	}
 
-	
+	.active{
+		
+		background-color:$white;
+		position:relative;
+
+			&:after{
+			top: 2.25em;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			}
+
+			&:after{
+			border-color: rgba(34, 34, 34, 0);
+			border-bottom-color: $blue;
+			border-width: .75em;
+			left: 50%;
+			margin-left: -.75em;
+			}
+	}
 }
 
 #primary a{
@@ -215,8 +239,11 @@ figcaption{
 		background-color:$blue;
 	}
 
-	
+
+
 }
+
+
 
 // Utility Nav
 
