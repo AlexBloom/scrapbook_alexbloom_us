@@ -1,14 +1,102 @@
 /* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
 
+
+
+
+@font-face {
+	font-family: 'Journal-Icons';
+	src:url('../fonts/Journal-Icons.eot');
+	src:url('../fonts/Journal-Icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Journal-Icons.woff') format('woff'),
+		url('../fonts/Journal-Icons.ttf') format('truetype'),
+		url('../fonts/Journal-Icons.svg#Journal-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'Journal-Icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-plus, .icon-minus, .icon-remove, .icon-link, .icon-download-alt, .icon-chevron-right, .icon-chevron-left, .icon-reorder, .icon-home, .icon-image, .icon-Single, .icon-Grid, .icon-Mail {
+	font-family: 'Journal-Icons';
+	speak: none;
+	font-size:20px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-plus:before {
+	content: "\5a";
+}
+.icon-minus:before {
+	content: "\7a";
+}
+.icon-remove:before {
+	content: "\58";
+}
+.icon-link:before {
+	content: "\e002";
+}
+.icon-download-alt:before {
+	content: "\53";
+}
+.icon-chevron-right:before {
+	content: "\72";
+}
+.icon-chevron-left:before {
+	content: "\6c";
+}
+.icon-reorder:before {
+	content: "\6d";
+}
+.icon-home:before {
+	content: "\48";
+}
+.icon-image:before {
+	content: "\69";
+}
+.icon-Single:before {
+	content: "\73";
+}
+.icon-Grid:before {
+	content: "\67";
+}
+.icon-Mail:before {
+	content: "\21";
+}
+
+
+
+
+
+
+
+
 body{
 	font-family:"garamond-premier-pro", georgia, courier, serif;
 	line-height:1.75em;
 	font-size:1em;
-
-	@media screen and (min-width:(em(800))){
-
-	}
 }
+
+
 
 h1{
 font-family:"alternate-gothic-no-2-d", helvetica, arial, sans-serif;
@@ -16,6 +104,13 @@ font-weight:700;
 text-align:center;
 text-transform:uppercase;
 letter-spacing:.1em;
+font-size:2em;
+line-height:150%;
+
+	@media screen and (min-width:(em(800))){
+		font-size:2.5em;
+	}
+
 }
 
 h2{
@@ -24,6 +119,11 @@ font-weight:700;
 text-align:center;
 text-transform:uppercase;
 letter-spacing:.1em;
+
+	@media screen and (min-width:(em(800))){
+		font-size:2em;
+	}
+
 }
 
 h3{
@@ -46,13 +146,25 @@ font-weight:300;
 }
 
 p{
+	font-size:1em;
+	line-height:175%;
+
+	@media screen and (min-width:(em(800))){
+		font-size:1.15em;
+	}
+
 
 }
 
 p.intro{
 	font-size:1.25em;
 	font-weight:500;
-	line-height:1.5em;
+	line-height:150%;
+
+	@media screen and (min-width:(em(800))){
+		font-size:1.5em;
+	}
+
 }
 
 p.subtitle{
@@ -91,41 +203,48 @@ a{
 article a{
 	border-bottom:1px dotted $black;
 	color: $black;
-	display:block;
-	padding:1em;
+	display:inline-block;
+	padding:.1em 0;
 
 	&:hover{
 		color:$blue;
 		border:none;
-		border-bottom:none;
+		border-bottom:1px dotted $blue;
 	}
 
 	&:active{
-		color:$medium-grey;
-		border-bottom:none;
+		background-color:$blue;
+		color:$white;
+		border-bottom:1px dotted $blue;
 	}
 
 }
 
 blockquote{
 	font-style:italic; 
-	line-height:1.75em; 
+	line-height:175%; 
 	font-size:1.15em; 
 	float:left; 
-	font-family: Georgia, times, serif; 
+	font-family:"garamond-premier-pro",  Georgia, times, serif; 
 	font-style:italic; 
 	font-weight:400; 
-	border-left: 1px dotted #151515; 
+	border-left: 1px dotted $light-grey; 
 	padding: 0 0 0 2em; 
-	margin: 2em 0;
+	margin: 2em 0 2em;
+
+	@media screen and (min-width:(em(800))){
+		font-size:1.25em;
+	}
+
 }
 
 blockquote:before{
-	font-family:Georgia, serif;
-	content: "";
-	font-size:2.75em;
-	text-indent:-.95em;
-	margin-top:.1em;
+	font-family:"garamond-premier-pro", Georgia, serif;
+	content:"\201c";
+	font-size:5em;
+	color:$light-grey;
+	text-indent:-1.25em;
+	margin-top:.25em;
 	float:left;
 }
 

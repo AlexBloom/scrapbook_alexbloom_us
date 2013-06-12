@@ -124,6 +124,11 @@ img{
 	
 }
 
+.pano{
+	width:97.5%;
+}
+
+
 
 
 
@@ -151,9 +156,13 @@ img{
 #mail{
 	display:none;
 	float:right;
-	margin:1em;
+	margin:1em .5em;
 	padding:.5em 1em;
 	border:1px solid $light-grey;
+
+	a{
+		color:$dark-grey;
+	}
 
 	&:hover a{
 		color:$blue;
@@ -172,7 +181,7 @@ img{
 		top:0px;
 		right:0px;
 		margin:0em;
-		padding:1em 2em;
+		padding:1.15em 1.25em .85em;
 	}
 }
 
@@ -248,25 +257,72 @@ img{
 // Utility Nav
 
 #utility{
-	
-
-	a{
-		margin:0;
-		padding:.5em;
-		border:none;
-	}
 
 	ul{
-		margin:0 auto;
-		width:150px;
+		//width:11.25em;
+		width:12em;
+		margin:0 auto 2em;
 		list-style-type:none;
 	}
 
 	li{
 		float:left;
-		padding:.1em;
-		margin:0;
+		text-align:center;
+
+	}
+
+	a{
+		font-size:.75em;
+		text-transform:uppercase;
+		letter-spacing:.1em;
+		display:block;
+		margin:1em .5em 2em;
+		padding:1em 1em .5em;
+		color:$dark-grey;
+		border:1px solid $light-grey;
+
+		&:hover{
+			color:$blue;
+		}
+
+		&:active{
+			background-color:$blue;
+			color:$white;
+		}
 	}
 }
 
-// 
+
+.utility-btn {
+	margin:2em 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+// Footer
+
+footer{
+	background-color: $light-grey;
+	border-top:1px solid $light-grey;
+	margin:4em 0 0 0;
+	padding:2em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
