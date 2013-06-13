@@ -87,7 +87,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-size: 2em;
-  line-height: 150%; }
+  line-height: 1.75em; }
   @media screen and (min-width: 50em) {
     h1 {
       font-size: 2.5em; } }
@@ -117,8 +117,7 @@ h6 {
   font-weight: 300; }
 
 p {
-  font-size: 1em;
-  line-height: 175%; }
+  font-size: 1em; }
   @media screen and (min-width: 50em) {
     p {
       font-size: 1.15em; } }
@@ -126,7 +125,7 @@ p {
 p.intro {
   font-size: 1.25em;
   font-weight: 500;
-  line-height: 150%; }
+  line-height: 1.75em; }
   @media screen and (min-width: 50em) {
     p.intro {
       font-size: 1.5em; } }
@@ -155,7 +154,7 @@ article a {
   border-bottom: 1px dotted black;
   color: black;
   display: inline-block;
-  padding: .1em 0; }
+  padding: 0; }
   article a:hover {
     color: #03b8ca;
     border: none;
@@ -191,8 +190,12 @@ blockquote:before {
 
 figcaption {
   font-size: 0.9em;
+  font-style: italic;
   padding: 1.25em .75em .75em;
   line-height: 175%; }
+  @media screen and (min-width: 50em) {
+    figcaption {
+      font-size: 1em; } }
 
 .run-in {
   font-size: .8em;
@@ -217,9 +220,78 @@ figcaption {
 .cf:after {
   clear: both; }
 
+/* ========================================================================  Header */
 header {
-  width: 100%; }
+  width: 100%;
+  background-image: url(../img/handmadepaper.png); }
 
+#primary {
+  max-height: auto;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa; }
+  #primary ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    @media screen and (min-width: 46.875em) {
+      #primary ul {
+        width: 600px;
+        margin: 0 auto; } }
+  #primary .active {
+    position: relative; }
+    #primary .active:after {
+      top: 2.25em;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    #primary .active:after {
+      border-bottom-color: #252525;
+      border-width: .75em;
+      left: 50%;
+      margin-left: -.75em; }
+
+#primary a {
+  text-decoration: none;
+  color: #252525;
+  display: block;
+  margin: 0;
+  padding: 1em 1%;
+  float: left;
+  width: 23%;
+  text-align: center; }
+  #primary a:hover {
+    color: #03b8ca; }
+  #primary a:active {
+    color: white;
+    background-color: #03b8ca; }
+
+#mail {
+  display: none;
+  float: right;
+  margin: 1em .5em;
+  padding: .5em 1em;
+  border: 1px solid #aaaaaa; }
+  #mail a {
+    color: #252525; }
+  #mail:hover a {
+    color: #03b8ca; }
+  #mail:active {
+    background-color: #03b8ca; }
+    #mail:active a {
+      color: white; }
+  @media screen and (min-width: 46.875em) {
+    #mail {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin: 0em;
+      padding: 1.15em 1.25em .85em; } }
+
+/* ========================================================================  Article */
 article {
   width: 90%;
   padding: 1em 5%; }
@@ -234,11 +306,12 @@ article {
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       hyphens: auto; } }
-  @media screen and (min-width: 50em) {
+  @media screen and (min-width: 56.25em) {
     article {
       width: 50em;
       margin: 0 auto; } }
 
+/* ========================================================================  Photographs */
 .photographs {
   position: relative; }
   @media screen and (min-width: 37.5em) {
@@ -247,11 +320,18 @@ article {
       margin: 0 auto; } }
   @media screen and (min-width: 50em) {
     .photographs {
+      width: 43.75em;
+      margin: 0 auto; } }
+  @media screen and (min-width: 56.25em) {
+    .photographs {
       width: 50em; } }
-  @media screen and (min-width: 60em) {
+  @media screen and (min-width: 65.625em) {
     .photographs {
       width: 60em; } }
-  @media screen and (min-width: 87.5em) {
+  @media screen and (min-width: 81.25em) {
+    .photographs {
+      width: 75em; } }
+  @media screen and (min-width: 93.75em) {
     .photographs {
       width: 87.5em; } }
 
@@ -282,126 +362,75 @@ article {
     padding: 10px; } }
 @media screen and (min-width: 50em) {
   .gridview {
+    width: 310px; } }
+@media screen and (min-width: 56.25em) {
+  .gridview {
     width: 360px; } }
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 56.25em) {
+  .gridview {
+    width: 360px; } }
+@media screen and (min-width: 65.625em) {
   .gridview {
     width: 280px; } }
-@media screen and (min-width: 87.5em) {
+@media screen and (min-width: 81.25em) {
+  .gridview {
+    width: 360px; } }
+@media screen and (min-width: 93.75em) {
   .gridview {
     width: 310px; } }
 
-.pano {
-  width: 97.5%; }
+.gridview.pano {
+  width: 95%; }
+  @media screen and (min-width: 65.625em) {
+    .gridview.pano {
+      width: 96%; } }
+  @media screen and (min-width: 81.25em) {
+    .gridview.pano {
+      width: 97%; } }
 
-#toggle {
-  float: left;
-  margin: 1em;
-  padding: .5em 1em;
-  border: 1px solid #aaaaaa; }
-  #toggle:hover {
-    color: #03b8ca; }
-  #toggle:active {
-    background-color: #03b8ca;
-    color: white; }
-  @media screen and (min-width: 46.875em) {
-    #toggle {
-      display: none; } }
-
-#mail {
-  display: none;
-  float: right;
-  margin: 1em .5em;
-  padding: .5em 1em;
-  border: 1px solid #aaaaaa; }
-  #mail a {
-    color: #252525; }
-  #mail:hover a {
-    color: #03b8ca; }
-  #mail:active {
-    background-color: #03b8ca; }
-    #mail:active a {
-      color: white; }
-  @media screen and (min-width: 46.875em) {
-    #mail {
-      display: block;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      margin: 0em;
-      padding: 1.15em 1.25em .85em; } }
-
-#primary {
-  max-height: auto;
-  border-top: 1px solid #aaaaaa;
-  border-bottom: 1px solid #aaaaaa; }
-  #primary ul {
-    margin: 0;
+/* ========================================================================  Utility Nav */
+#utility {
+  display: none; }
+  @media screen and (min-width: 43.75em) {
+    #utility {
+      display: block; } }
+  #utility ul {
     padding: 0;
-    list-style-type: none; }
-    @media screen and (min-width: 46.875em) {
-      #primary ul {
-        width: 600px;
-        margin: 0 auto; } }
-  #primary .active {
-    background-color: white;
-    position: relative; }
-    #primary .active:after {
-      top: 2.25em;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none; }
-    #primary .active:after {
-      border-color: rgba(34, 34, 34, 0);
-      border-bottom-color: #03b8ca;
-      border-width: .75em;
-      left: 50%;
-      margin-left: -.75em; }
+    list-style-type: none;
+    list-style-type: none;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 400px;
+    -webkit-box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.8);
+    -ms-box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.8); }
+  #utility li {
+    text-align: center;
+    border: 1px solid #aaaaaa; }
+    #utility li:last-child {
+      border-top: none; }
+  #utility a {
+    font-size: .75em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    display: block;
+    margin: 0;
+    padding: 1em 1em .5em;
+    color: #252525;
+    background-color: white; }
+    #utility a:hover {
+      color: #03b8ca; }
+    #utility a:active {
+      background-color: #03b8ca;
+      color: white; }
 
-#primary a {
-  text-decoration: none;
-  color: #252525;
-  display: block;
-  margin: 0;
-  padding: 1em 1%;
-  float: left;
-  width: 23%;
-  text-align: center; }
-  #primary a:hover {
-    color: #03b8ca; }
-  #primary a:active {
-    color: white;
-    background-color: #03b8ca; }
-
-#utility ul {
-  width: 12em;
-  margin: 0 auto 2em;
-  list-style-type: none; }
-#utility li {
-  float: left;
-  text-align: center; }
-#utility a {
-  font-size: .75em;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  display: block;
-  margin: 1em .5em 2em;
-  padding: 1em 1em .5em;
-  color: #252525;
-  border: 1px solid #aaaaaa; }
-  #utility a:hover {
-    color: #03b8ca; }
-  #utility a:active {
-    background-color: #03b8ca;
-    color: white; }
-
-.utility-btn {
-  margin: 2em 0 0 0; }
-
+/* ========================================================================  Footer */
 footer {
-  background-color: #aaaaaa;
+  background-image: url(../img/handmadepaper.png);
   border-top: 1px solid #aaaaaa;
   margin: 4em 0 0 0;
   padding: 2em 0; }

@@ -12,146 +12,77 @@
     clear: both;
 }
 
-// Layout
+/* ========================================================================  Header */
+
 header{
 width:100%;
-}
-
-section{
-
-}
-
-article{
-width:90%;
-padding:1em 5%;
-
-	@media screen and (min-width:(em(800))){
-		
-		p.two{
-			column-count:2;
-			-moz-column-count:2;
-			-webkit-column-count:2;
-
-			-moz-column-gap:3em;
-			-webkit-column-gap:3em;
-			column-gap:3em;
-
-			-webkit-hyphens: auto;
-			-moz-hyphens: auto;
-			hyphens: auto;
-			
-		}
-			
-	}
-
-	@media screen and (min-width:(em(800))){
-	width: (em(800));
-	margin:0 auto;		
-	}
-
-}
-
-.photographs{
-	position:relative;
-
-	//background-color:$dark-grey;
-
-	@media screen and (min-width:(em(600))){
-	width: (em(600));
-	margin:0 auto;
-	}
-
-	@media screen and (min-width:(em(800))){
-	width: (em(800));
-	}
-
-	@media screen and (min-width:(em(960))){
-	width: (em(960));
-	}
-
-	@media screen and (min-width:(em(1400))){
-	width: (em(1400));
-	}
-}
-
-
-.photo{
-float:left;
 background-image: url(../img/handmadepaper.png);
-padding:1em;
-margin:1em;
-@include drop-shadow;
-img{
-		width:100%;
-		outline: 1px solid $light-grey;
-	}
 }
-
-.singleview{
-
-
-	@media screen and (min-width:(em(800))){
-		float:none;
-		width: (em(800));
-		margin:2em auto;
-	}
-
-}
-
-
-// STYLES FOR GRID VIEW
-
-.gridview{
-
-	@media screen and (min-width:(em(600))){
-	width:260px;
-	margin:10px;
-	padding:10px;
-	}
-
-	@media screen and (min-width:(em(800))){
-	width: 360px;
-	}
-
-	@media screen and (min-width:(em(960))){
-	width:280px;
-	}
-
-	@media screen and (min-width:(em(1400))){
-	width:310px;
-	}
-	
-	
-}
-
-.pano{
-	width:97.5%;
-}
-
-
-
-
 
 // Primary Nav
 
-#toggle{
-	float:left;
-	margin:1em;
-	padding:.5em 1em;
-	border:1px solid $light-grey;
+#primary{
+	max-height:auto;
+	border-top:1px solid $light-grey;
+	border-bottom:1px solid $light-grey;
 
+	ul{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+
+		@media screen and (min-width:(em(750))){
+		width:600px;
+		margin:0 auto;
+		}
+	}
+
+	.active{
+		position:relative;
+		//background-color:$dark-grey;
+		
+
+			&:after{
+			top: 2.25em;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			}
+
+			&:after{
+			//border-color: rgba(34, 34, 34, 0);
+			border-bottom-color: $dark-grey;
+			border-width: .75em;
+			left: 50%;
+			margin-left: -.75em;
+			}
+	}
+}
+
+// Primary Nav Links
+
+#primary a{
+	text-decoration:none;
+	color: $dark-grey;
+	display:block;
+	margin:0;
+	padding:1em 1%;
+	float:left;
+	width:23%;
+	text-align:center;
 	&:hover{
 		color:$blue;
 	}
 	&:active{
-		background-color:$blue; 
 		color:$white;
-	}
-
-	@media screen and (min-width:(em(750))){
-		display:none;
+		background-color:$blue;
 	}
 }
+
+// Mail Link
 
 #mail{
 	display:none;
@@ -185,101 +116,185 @@ img{
 	}
 }
 
+/* ========================================================================  Article */
 
+article{
+width:90%;
+padding:1em 5%;
 
-#primary{
-	max-height:auto;
-	
-	border-top:1px solid $light-grey;
-	border-bottom:1px solid $light-grey;
-
-	ul{
-		margin:0;
-		padding:0;
-		list-style-type:none;
-
-		@media screen and (min-width:(em(750))){
-		width:600px;
-		margin:0 auto;
-		}
-	}
-
-	.active{
+	@media screen and (min-width:(em(800))){
 		
-		background-color:$white;
-		position:relative;
+		p.two{
+			column-count:2;
+			-moz-column-count:2;
+			-webkit-column-count:2;
 
-			&:after{
-			top: 2.25em;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-			}
+			-moz-column-gap:3em;
+			-webkit-column-gap:3em;
+			column-gap:3em;
 
-			&:after{
-			border-color: rgba(34, 34, 34, 0);
-			border-bottom-color: $blue;
-			border-width: .75em;
-			left: 50%;
-			margin-left: -.75em;
-			}
-	}
-}
-
-#primary a{
-	text-decoration:none;
-	color: $dark-grey;
-	display:block;
-	margin:0;
-	padding:1em 1%;
-	float:left;
-	width:23%;
-	text-align:center;
-
-	&:hover{
-		color:$blue;
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			hyphens: auto;
+			
+		}
+			
 	}
 
-	&:active{
-		color:$white;
-		background-color:$blue;
+	@media screen and (min-width:(em(900))){
+	width: (em(800));
+	margin:0 auto;		
 	}
-
-
 
 }
 
+/* ========================================================================  Photographs */
+
+.photographs{
+	position:relative;
+
+	//background-color:$dark-grey;
+
+	@media screen and (min-width:(em(600))){
+	width: (em(600));
+	margin:0 auto;
+	}
+
+	@media screen and (min-width:(em(800))){
+	width: (em(700));
+	margin:0 auto;
+	}
+
+	@media screen and (min-width:(em(900))){
+	width: (em(800));
+	}
+
+	@media screen and (min-width:(em(1050))){
+	width: (em(960));
+	}
+
+	@media screen and (min-width:(em(1300))){
+	width: (em(1200));
+	}
+
+	@media screen and (min-width:(em(1500))){
+	width: (em(1400));
+	}
+}
+
+.photo{
+float:left;
+background-image: url(../img/handmadepaper.png);
+padding:1em;
+margin:1em;
+@include drop-shadow;
+	
+	img{
+	width:100%;
+	outline: 1px solid $light-grey;
+	}
+}
+
+// Single Column
+
+.singleview{
+
+	@media screen and (min-width:(em(800))){
+	float:none;
+	width: (em(800));
+	margin:2em auto;
+	}
+}
 
 
-// Utility Nav
+// Grid of Photos
+
+.gridview{
+
+	@media screen and (min-width:(em(600))){
+	width:260px;
+	margin:10px;
+	padding:10px;
+	}
+
+	@media screen and (min-width:(em(800))){
+	width: 310px;
+	}
+
+	@media screen and (min-width:(em(900))){
+	width: 360px;
+	}
+
+	@media screen and (min-width:(em(900))){
+	width: 360px;
+	}
+
+	@media screen and (min-width:(em(1050))){
+	width:280px;
+	}
+
+	@media screen and (min-width:(em(1300))){
+	width:360px;
+	}
+
+	@media screen and (min-width:(em(1500))){
+	width:310px;
+	}
+		
+}
+
+.gridview.pano{
+	width:95%;
+
+	@media screen and (min-width:(em(1050))){
+		width:96%;
+	}
+
+	@media screen and (min-width:(em(1300))){
+		width:97%;
+	}
+
+
+}
+
+/* ========================================================================  Utility Nav */
 
 #utility{
+	display:none;
+	@media screen and (min-width:(em(700))){
+		display:block;
+	}
 
 	ul{
-		//width:11.25em;
-		width:12em;
-		margin:0 auto 2em;
+		//width:12em;
+		padding:0;
 		list-style-type:none;
+		list-style-type: none;
+		position: fixed;
+		z-index:1000;
+		right: 0;
+		top: 400px;
+		@include drop-shadow;
 	}
 
 	li{
-		float:left;
 		text-align:center;
-
+		border:1px solid $light-grey;
+		&:last-child{
+			border-top:none;
+		}
 	}
 
 	a{
 		font-size:.75em;
+		line-height:1.5em;
 		text-transform:uppercase;
 		letter-spacing:.1em;
 		display:block;
-		margin:1em .5em 2em;
+		margin:0;
 		padding:1em 1em .5em;
 		color:$dark-grey;
-		border:1px solid $light-grey;
+		background-color:$white;
 
 		&:hover{
 			color:$blue;
@@ -293,24 +308,13 @@ img{
 }
 
 
-.utility-btn {
-	margin:2em 0 0 0;
-}
 
 
 
-
-
-
-
-
-
-
-
-// Footer
+/* ========================================================================  Footer */
 
 footer{
-	background-color: $light-grey;
+	background-image: url(../img/handmadepaper.png);
 	border-top:1px solid $light-grey;
 	margin:4em 0 0 0;
 	padding:2em 0;
